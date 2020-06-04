@@ -6,50 +6,118 @@
 // Excercise 1
 
 console.log("\n"+"Excercise 1");
-printsValuesAndSums([6,3,5,1,2,4]); // Should return 1, 3, 5, 7, 9, 11, 13, 15, 17, 19
+pushFront(["Feb", "March", "April", "June"], "Jan")// Should return ["Jan", "Feb", "March", "April", "June"]
 
 // Excercise 2
 
 console.log("\n"+"Excercise 2");
-valueTimesPosition([6,3,5,1,2,4]); // Should return [0,3,10,3,8,20]
+insertAt(["Feb", "March", "April", "June"], 1, "Jan")// Should return ["Feb","Jan", "March", "April", "June"]
+
+// Excercise 3
+
+console.log("\n"+"Excercise 3");
+removeAt(["Feb", "March", "April", "June"], 1)// Should return ["Feb"]
+
+// Excercise 4
+
+console.log("\n"+"Excercise 4");
+swapPairs([1,2,3,4])// Should return [2,1,4,3]
+swapPairs(["Brendan",true,42])// Should return [true,"Brendan",42]
+
+// Excercise 5
+
+console.log("\n"+"Excercise 5");
+removeDuplicates(["John Doe","John Doe","Mich Buckanon","Peter Petegreu","Peter Petegreu","Susan Phillips","Susan Phillips","Zack Efron"])// Should return ["John Doe","Mich Buckanon","Susan Phillips","Zack Efron"]
+
+
 
 // =========================================================================================
 // ANSWERS FOR FUNCTIONS
 // =========================================================================================
 
-
 // Excercise 1
 
-// Print Values and Sum
-// Print each array value and the sum so far using the array [6,3,5,1,2,4];
-// The expected output will be: 
+// Push Front
+// Given an array and an additional value, insert this value at the beginning of the array. Do this without using any built-in array methods.
 
-// Num 6, Sum 6
-// Num 3, Sum 9
-// Num 5, Sum 14
-// Num 1, Sum 15
-// Num 2, Sum 17
-// Num 4, Sum 21
-
-function printsValuesAndSums(testArr){
-    var sum = 0;
-    for(var i=0;i<testArr.length;i++){
-        sum = sum+testArr[i];
-        console.log("Num: " + testArr[i] + ", Sum: " + sum);
+function pushFront(array, newValue){
+    array[array.length] = newValue
+    for (i = array.length-1; i > 0; i--){
+        array[i] = array[i-1]
     }
+    array[0] = newValue
+    console.log(array);
+    return array;
 }
  
 // Excercise 2
 
-// Value * Position
-// Multiply each value in the array [6,3,5,1,2,4] by its array position
-// The expected output will be:
+// Insert At
+// Given an array, index, and additional value, insert the value into array at given index. Do this without using built-in array methods. You can think of pushFront(arr,val) as equivalent to insertAt(arr,0,val).
 
-function valueTimesPosition(testArr){
-   
-    var newArray =[];
-    for(var i=0;i<testArr.length;i++){
-        newArray[i] = testArr[i]*i;
+function insertAt(array, index, newValue){
+    array[array.length] = newValue
+    for (i = array.length-1; i > index; i--){
+        array[i] = array[i-1]
     }
-    console.log(newArray);
+    array[index] = newValue
+    console.log(array);
+    return array;
 }
+
+// Excercise 3
+
+// Remove At
+// Given an array and an index into array, remove and return the array value at that index. Do this without using built-in array methods except pop(). Think of popFront(arr) as equivalent to removeAt(arr,0).
+
+function removeAt(array, index){
+    for (i = array.length-1; i > index; i--){
+        array.pop()
+    }
+    console.log(array);
+    return array;
+}
+
+// Excercise 4
+
+// Swap Pairs
+// Swap positions of successive pairs of values of given array. If length is odd, do not change the final element. For [1,2,3,4], return [2,1,4,3]. For example, change input ["Brendan",true,42] to [true,"Brendan",42]. As with all array challenges, do this without using any built-in array methods.
+
+function swapPairs(array){
+    
+    if (array.length%2 == 0){ // for arrays which length is even
+        for (i = 0; i < array.length; i=i+2){
+            [array[i],array[i+1]] = [array[i+1],array[i]] 
+        }
+    }
+    else { // for arrays which length is odd
+        for (i = 0; i < array.length-1; i=i+2){
+            [array[i],array[i+1]] = [array[i+1],array[i]] 
+        }
+    }
+    
+    console.log(array);
+    return array;
+}
+
+// Excercise 5
+
+// Remove Duplicates
+// Sara is looking to hire an awesome web developer and has received applications from various sources. Her assistant alphabetized them but noticed some duplicates. Given a sorted array, remove duplicate values. Because array elements are already in order, all duplicate values will be grouped together. As with all these array challenges, do this without using any built-in array methods. 
+
+// Second: Solve this without using any nested loops.
+
+function removeDuplicates(array){
+    
+    var sortedArray = array.slice().sort();
+    var uniqueValuesArray =[];
+    
+    for (i = 0; i < sortedArray.length; i++){
+        if(sortedArray[i+1] != sortedArray[i]){
+            uniqueValuesArray.push(sortedArray[i])
+        }
+    }    
+    console.log(uniqueValuesArray);
+    return uniqueValuesArray;
+}
+
