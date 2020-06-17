@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+
+    <!-- ================================================================================================ -->
+    <!-- 0) LOAD OF EXTERNAL LIBRARIES, STYLES AND SCRIPTS -->
+    <!-- ================================================================================================ -->
+
+    <!-- 0.1) External Libraries for Styles (CSS) -->
+    <!-- CSS Google Font (Uploaded by CDN with weblink)-->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700,700i" rel="stylesheet"> <!-- Library for applying some cutomized styles-->
+    <!-- CSS Bootstrap 4 (Uploaded locally in folder project) -->
+    <link type="text/css" rel="stylesheet" href="libs/bootstrap.min.css"> <!-- Library required for Bootstrap to work -->
+
+    <!-- 0.2) External Libraries for Scripts (JS) -->
+    <!-- JS JQuery (Uploaded locally in folder project) -->
+    <script defer src="libs/jquery-3.5.1.min.js"></script> <!-- Library required for Bootstrap to work -->
+    <!-- JS Popper (Uploaded locally in folder project) -->
+    <script defer src="libs/popper.min.js"></script> <!-- Library required for Bootstrap to work -->
+    <!-- JS Bootstrap (Uploaded locally in folder project) -->
+    <script defer src="libs/bootstrap.min.js"></script> <!-- Library required for Bootstrap to work -->
+    
+    
+    <!-- 0.3 Personal Styles (CSS)   -->
+    <link type="text/css" rel="stylesheet" href="css/styles.css"> <!-- Personal Styles -->
+    <!-- (no personal Scripts to Upload -> "js" folder empty)  -->
+
+
+    <!-- 0.4) Title and Favicon -->
+    <title>Blog Personal de Samuel Valdes Gutierrez</title>
+    <link rel="shortcut icon" type="image/x-icon" href="images/favicon_2.ico"> <!-- Favicon used as icon on browser tab -->
+    
+</head>
+<body>
+
+    <!-- ================================================================================================ -->
+    <!-- Considerations: -->
+    <!-- 1) The following classes used in this project are classes entirely built-in classes from Bootstrap. The Personal styles on the styles.css file only overwrite built-in Bootstrap classes or main HTML elements -->
+    <!-- 2) The  <nav>, <section>, <article> and <footer> tag are only semantic tags really similar to the <div> tag. The purpose of them is only to avoid the overuse of <div> tags and make the code more readuible and neater -->
+    <!-- 3) This project only use Front-End technologies (HTML, CSS, JS, JQuery, Bootstrap). No Back-End development (such as Python or Django) is used here -->
+    <!-- ================================================================================================ -->
+
+
+    <!-- ================================================================================================ -->
+    <!-- 1) NAVBAR -->
+    <!-- ================================================================================================ -->
+    
+    <nav class="navbar navbar-dark bg-dark navbar-expand-md fixed-top">
+        <div class="container">
+            <a href="#" class="navbar-brand">
+                <strong>Samuel</strong> Valdes Gutierrez
+            </a>
+
+            <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#menu-principal" aria-controls="menu-principal" aria-controls="menu-principal" aria-expanded="false" aria-label="Deploy Menu Navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="menu-principal">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item"><a href="#" class="nav-link active">Home</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">About</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">Proyects</a></li>
+                </ul>
+            </div>
+
+        </div>
+    </nav>
+
+    <!-- ================================================================================================ -->
+    <!-- 2) ABOUT ME -->
+    <!-- ================================================================================================ -->
+    
+    <section class="py-4 mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-md-6 text-center">
+                    <img src="images/desarrollador.svg" alt="I am the developer" class="img-fluid mb-4 mb-md-0">
+                </div>
+                <div class="col-12 col-md-6 text-center text-md-left align-self-md-center">
+                    <h1 class="display-4 font-weight-bold text-primary">Who am I?</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipiscing elit dictum torquent, libero hac enim eleifend vitae posuere metus neque, fringilla per nullam himenaeos bibendum quis imperdiet lobortis.</p>
+                    <a href="#" class="btn btn-primary btn-lg"> Read More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================================================================================================ -->
+    <!-- 3) MY PHILOSOPHY -->
+    <!-- ================================================================================================ -->
+
+    <section class="py-4 bg-primary text-center text-white">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <img src="images/myPhoto-small.jpg" width="260" height="auto" alt="My Photo" class="img-fluid rounded-circle mb-4">
+                    <p class="h2"><span class="small">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis odio amet nulla ad nobis minima doloribus inventore, aspernatur distinctio dicta ipsam fugit suscipit ullam architecto eos molestias placeat rerum facere.</span></p>
+                    <p class="h4 font-italic">- Samuel Valdes Gutierrez</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================================================================================================ -->
+    <!-- 4) MY PROYECTS -->
+    <!-- ================================================================================================ -->
+
+    <section class="py-4">
+        <div class="container">
+            <h1 class="display-4 font-weight-bold text-center pb-4">My Proyects</h1>
+            <div class="row text-md-center">
+                <article class="col-12 col-md-6 col-lg-3 mb-3 mb-lg-0">
+                    <div class="card">
+                        <img class="card-img-top h-100" src="images/proyecto1.png" alt="Proyect 1">
+                        <div class="card-body text-center">
+                            <h4 class="card-title">Proyect 1</h4>
+                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate sit nisi beatae amet blanditiis placeat repellat minima assumenda, animi impedit totam, voluptatum aut nihil alias laboriosam expedita, dolor nam voluptatem.</p>
+                            <a href="#" class="btn btn-primary">Check Proyect</a>
+                        </div>
+                    </div>
+                </article>
+                <article class="col-12 col-md-6 col-lg-3 mb-3 mb-lg-0">
+                    <div class="card">
+                        <img class="card-img-top h-100" src="images/proyecto2.png" alt="Proyect 2">
+                        <div class="card-body text-center">
+                            <h4 class="card-title">Proyect 2</h4>
+                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate sit nisi beatae amet blanditiis placeat repellat minima assumenda, animi impedit totam, voluptatum aut nihil alias laboriosam expedita, dolor nam voluptatem.</p>
+                            <a href="#" class="btn btn-primary">Check Proyect</a>
+                        </div>
+                    </div>
+                </article>
+                <article class="col-12 col-md-6 col-lg-3 mb-3 mb-lg-0">
+                    <div class="card text-center">
+                        <img class="card-img-top h-100" src="images/proyecto3.png" alt="Proyect 3">
+                        <div class="card-body">
+                            <h4 class="card-title">Proyect 3</h4>
+                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate sit nisi beatae amet blanditiis placeat repellat minima assumenda, animi impedit totam, voluptatum aut nihil alias laboriosam expedita, dolor nam voluptatem.</p>
+                            <a href="#" class="btn btn-primary">Check Proyect</a>
+                        </div>
+                    </div>
+                </article>
+                <article class="col-12 col-md-6 col-lg-3 mb-3 mb-lg-0">
+                    <div class="card text-center">
+                        <img class="card-img-top h-100" src="images/proyecto4.png" alt="Proyect 4">
+                        <div class="card-body">
+                            <h4 class="card-title">Proyect 4</h4>
+                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate sit nisi beatae amet blanditiis placeat repellat minima assumenda, animi impedit totam, voluptatum aut nihil alias laboriosam expedita, dolor nam voluptatem.</p>
+                            <a href="#" class="btn btn-primary">Check Proyect</a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================================================================================================ -->
+    <!-- 5) FOOTER -->
+    <!-- ================================================================================================ -->
+
+    <footer class="text-center bg-dark text-white">
+        <div class="container">
+            <p class="m-0 py-3">Copyright © 2020. All rights reserved. </p>
+          </div>
+    </footer>
+
+</body>
+</html>
