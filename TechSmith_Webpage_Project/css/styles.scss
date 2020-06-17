@@ -1,0 +1,549 @@
+// .row > * {
+//   border: 1px solid rgb(231, 24, 24);
+// }
+
+//---------------------------------------
+//1. COLOR PATTERN
+//---------------------------------------
+$primary: #448ccb;
+$secondary: #ef8200;
+$dark: #999;
+$text: #333;
+
+//---------------------------------------
+// 2. SITE TYPOGRAPHY
+//---------------------------------------
+
+html {
+  font-size: 13px;
+}
+
+body {
+  color: $text;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 300;
+}
+
+//---------------------------------------
+// 3. GENERAL STYLES FOR BUTTONS
+//---------------------------------------
+
+.btn {
+  padding: 0.5rem 2rem;
+  font-weight: bold;
+}
+
+//---------------------------------------
+// 4. STYLES FOR PRIMARY COLOR
+//---------------------------------------
+
+.bg-primary {
+  background-color: $primary !important;
+}
+
+.text-primary {
+  color: $primary !important;
+}
+
+.btn-primary {
+  background-color: $primary;
+  border-color: $primary;
+}
+
+.btn-primary:hover {
+  background-color: lighten($primary, 5%);
+  border-color: $primary;
+}
+
+.btn-primary:focus,
+.btn-primary.focus {
+  box-shadow: 0 0 0 0.2rem rgba($primary, 0.5);
+}
+
+.btn-primary:not(:disabled):not(.disabled):active,
+.btn-primary:not(:disabled):not(.disabled).active,
+.show > .btn-primary.dropdown-toggle {
+  color: #fff;
+  background-color: lighten($primary, 5%);
+  border-color: lighten($primary, 20%);
+}
+
+.btn-primary:not(:disabled):not(.disabled):active:focus,
+.btn-primary:not(:disabled):not(.disabled).active:focus,
+.show > .btn-primary.dropdown-toggle:focus {
+  box-shadow: 0 0 0 0.2rem rgba($primary, 0.5);
+}
+
+//---------------------------------------
+// 5. STYLES FOR SECONDARY COLOR
+//---------------------------------------
+
+.bg-secondary {
+  background-color: $secondary !important;
+}
+
+.text-secondary {
+  color: $secondary !important;
+}
+
+.btn-secondary {
+  background-color: $secondary;
+  border-color: $secondary;
+}
+
+.btn-secondary:hover {
+  background-color: lighten($secondary, 5%);
+  border-color: $secondary;
+}
+
+.btn-secondary:focus,
+.btn-secondary.focus {
+  box-shadow: 0 0 0 0.2rem rgba($secondary, 0.5);
+}
+
+.btn-secondary:not(:disabled):not(.disabled):active,
+.btn-secondary:not(:disabled):not(.disabled).active,
+.show > .btn-secondary.dropdown-toggle {
+  color: #fff;
+  background-color: lighten($secondary, 5%);
+  border-color: lighten($secondary, 20%);
+}
+
+.btn-secondary:not(:disabled):not(.disabled):active:focus,
+.btn-secondary:not(:disabled):not(.disabled).active:focus,
+.show > .btn-secondary.dropdown-toggle:focus {
+  box-shadow: 0 0 0 0.2rem rgba($secondary, 0.5);
+}
+
+//---------------------------------------
+// 6. STYLES FOR DARK COLOR
+//---------------------------------------
+
+.bg-dark {
+  background-color: $dark !important;
+}
+
+.text-dark {
+  color: $dark !important;
+}
+
+.btn-dark {
+  background-color: $dark;
+  border-color: $dark;
+}
+
+.btn-dark:hover {
+  background-color: lighten($dark, 5%);
+  border-color: $dark;
+}
+
+.btn-dark:focus,
+.btn-dark.focus {
+  box-shadow: 0 0 0 0.2rem rgba($dark, 0.5);
+}
+
+.btn-dark:not(:disabled):not(.disabled):active,
+.btn-dark:not(:disabled):not(.disabled).active,
+.show > .btn-dark.dropdown-toggle {
+  color: #fff;
+  background-color: lighten($dark, 5%);
+  border-color: lighten($dark, 20%);
+}
+
+.btn-dark:not(:disabled):not(.disabled):active:focus,
+.btn-dark:not(:disabled):not(.disabled).active:focus,
+.show > .btn-dark.dropdown-toggle:focus {
+  box-shadow: 0 0 0 0.2rem rgba($dark, 0.5);
+}
+
+//---------------------------------------
+// 7. STYLES FOR NAVIGATION
+//---------------------------------------
+
+#navigation {
+  background-color: #191916;
+
+  // Styling bootstrap.css navigation container
+  .container {
+    max-width: 100%;
+  }
+
+  // Styling bootstrap.css navbar-brand
+  .navbar-brand {
+    margin-right: 0px;
+    padding: 0px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    img {
+      width: 12rem;
+      height: auto;
+    }
+  }
+}
+
+// Styling mmenu.css Menu Navbar
+.mm-navbars_top .mm-navbar {
+  background-color: #ccc;
+}
+
+// Styling mmenu.css Menu links
+.mm-menu a,
+.mm-menu a:active,
+.mm-menu a:hover,
+.mm-menu a:link,
+.mm-menu a:visited {
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+//Styling mmenu.css Menu bullet points
+.mm-btn_next:after,
+.mm-btn_prev:before {
+  border: 2px solid rgb(51, 51, 51);
+  border-bottom: none;
+  border-right: none;
+  width: 4px;
+  height: 4px;
+}
+
+//Styling mburger.css burger button
+.mburger {
+  --mb-bar-width: 0.35; // Width of burger button bars
+  --mb-bar-height: 4px; // Height of burger button bars
+  --mb-bar-spacing: 5px; // Spacing of burger button bars
+  color: #fff !important;
+
+  height: 50px;
+  width: 103px;
+  line-height: 0;
+  padding: 0 0 0 33px;
+
+  &:hover {
+    background: rgba(255, 255, 255, 0.21);
+  }
+
+  b {
+    margin-left: -6px;
+  }
+}
+
+//Styling shopping chart button (Icons)
+.btnIcons {
+  background: transparent;
+  border: none;
+  color: white;
+  padding: 0 0.5rem;
+  &:hover,
+  &:focus {
+    background: rgba(255, 255, 255, 0.2);
+    outline: none;
+    color: white;
+    text-decoration: none; //taking out underline related to links (used in contact icon)
+  }
+}
+
+//Styling shopping chart button (Dropdwon-menu)
+.btnCart {
+  .dropdown-menu {
+    box-shadow: 0 0 13px rgba(0, 0, 0, 0.5);
+    padding: 1.5rem 1rem;
+    margin-top: 1rem;
+    &:before {
+      //adding arrow from dropdown-menu
+      content: "";
+      position: absolute;
+      background-color: white;
+      width: 1.5rem;
+      height: 1.5rem;
+      right: 1.4rem;
+      top: -0.5rem;
+      transform: rotate(45deg);
+      border-radius: 0.2rem;
+      box-shadow: -5px -5px 5px rgba(8, 8, 8, 0.18);
+    }
+  }
+}
+
+/* Hiding .fa-times icon by default on search button in Navbar*/
+.btnSearch {
+  .fa-times {
+    display: none;
+  }
+  &.btnSearchActive .fa-search {
+    display: none;
+  }
+
+  &.btnSearchActive .fa-times {
+    display: block;
+  }
+}
+
+//---------------------------------------
+// 8. STYLES FOR #headerDetails
+//---------------------------------------
+
+#headerDetails {
+  //Styling nav links on header
+  .nav-link {
+    color: #333;
+    padding: 0 0.7rem;
+
+    &:hover,
+    &:focus {
+      text-decoration: underline;
+    }
+    &.active {
+      font-weight: bold;
+    }
+  }
+}
+
+.fixedHeader {
+  background: #fff;
+  z-index: 9999;
+}
+
+//---------------------------------------
+// 9. STYLES FOR #productBenefitSlides
+//---------------------------------------
+
+//Styles for buttons next y prev
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  font-family: "Font Awesome 5 Free";
+  content: "\f053";
+  font-weight: 900;
+  color: #c7c7c7;
+  transition: color ease 0.5s;
+}
+
+.swiper-button-next::after {
+  content: "\f054";
+}
+.swiper-button-next:hover::after,
+.swiper-button-prev:hover::after {
+  color: #797878;
+}
+// Styles for pagination bullets
+.swiper-pagination-bullet {
+  width: 1.4rem;
+  height: 1.4rem;
+  display: inline-block;
+  border-radius: 100%;
+  background: #000;
+  opacity: 0.2;
+  transition: opacity ease 0.5s;
+}
+
+.swiper-pagination-bullet:hover {
+  opacity: 0.5;
+}
+.swiper-pagination-bullet-active {
+  opacity: 1;
+  background: $primary;
+}
+.swiper-pagination-bullet-active:hover {
+  opacity: 1;
+}
+//---------------------------------------
+// 10. STYLES FOR .navSlider
+//---------------------------------------
+
+// Styles for .navSlider
+.navSlider {
+  .swiper-slide {
+    width: auto !important;
+    margin: 0 0.7rem;
+    padding: 0.3rem 0;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #807f7f;
+    cursor: pointer;
+    border-bottom: 2px solid transparent; //allows nav links to have and transparent border an not move when they pass to an active state
+    transition: all ease 0.3s;
+  }
+
+  .swiper-slide-thumb-active {
+    color: $primary;
+    border-bottom: 2px solid $primary;
+  }
+}
+//---------------------------------------
+// 11. STYLES FOR #productFunctionSlides
+//---------------------------------------
+
+#productFunctionSlides {
+  background: #dedede;
+}
+
+//---------------------------------------
+// 12. STYLES FOR #footer
+//---------------------------------------
+
+// Styles for main Footer Section
+
+footer {
+  a {
+    color: #e4e3e3;
+
+    &:hover,
+    &:focus {
+      color: #abadaf;
+      outline: none;
+    }
+  }
+  ul a {
+    font-size: 0.85rem;
+    padding: 0.25rem 0;
+    display: block;
+  }
+  #mainFooterSection {
+    background-color: #525252;
+  }
+  // Styles for secondary Footer Section
+  #secondaryFooterSection {
+    background-color: #313131;
+
+    // Styling Social Network icons
+    #socialNetworkLinks {
+      a {
+        background: #adadad;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        width: 4rem;
+        height: 4rem;
+        font-size: 2.5rem;
+        color: #313131 !important;
+        margin: 0 0.3rem;
+        border-radius: 0.2rem;
+        text-decoration: none;
+        transition: transform ease 0.15s;
+
+        &:hover {
+          transform: scale(1.25);
+        }
+      }
+    }
+
+    // Styling other links
+    #otherLinks {
+      li {
+        a {
+          font-size: 1rem;
+          padding: 0.15rem 1rem;
+        }
+      }
+    }
+  }
+}
+
+//---------------------------------------
+// X. CUSTOMIZED MEDIA QUERIES
+//---------------------------------------
+
+
+// X.0) ADJUSTING STYLES AND ACTIONS FOR SMALL CONTEXTS
+@media (min-width: 576px) {
+  #otherLinks {
+    li {
+      display: flex;
+      align-items: center;
+      &::before {
+        font-family: "Font Awesome 5 Free";
+        font-weight: 900;
+        content: "\f111";
+        color: #fff;
+        font-size: 0.4rem;
+      }
+      &:first-child::before {
+        content: "";
+      }
+    }
+  }
+}
+
+// X.1) ADJUSTING STYLES AND ACTIONS FOR LARGE CONTEXTS
+@media (min-width: 992px) {
+  html {
+    font-size: 15px;
+  }
+
+  //Adjusting #navegation id styles (when class navbar-brand is adjusted the other ellements also afjust due to flex box strectch default property
+  #navigation .navbar-brand {
+    margin-right: 1.5rem;
+    padding: 0.7rem 0;
+    position: static;
+    left: auto;
+    transform: translateX(0);
+  }
+
+  //Adjusting .nav-links styles
+  .navbar-dark .navbar-nav .nav-link {
+    color: rgb(255, 255, 255);
+    padding: 0.9rem;
+    transition: all 0.3s ease;
+  }
+
+  //Adjusting .nav-links status hover and focus
+  .navbar-dark .navbar-nav .nav-link:hover,
+  .navbar-dark .navbar-nav .nav-link:focus {
+    color: rgba(255, 255, 255, 0.75);
+    background: rgba(255, 255, 255, 0.23);
+    box-shadow: 0 -5px 0 $primary inset;
+    cursor: pointer;
+  }
+
+  #mainMenu {
+    // Adjusting styles dropdown arrow symbol
+    .dropdown-toggle::after {
+      transform: scale(0.7) translateY(3px);
+    }
+
+    // Adjusting styles dropdown menu box
+    .dropdown-menu {
+      border-radius: 0;
+      box-shadow: 0 3px 10px #0404045e;
+      border: 0;
+      background: #f7f7f7;
+      transform: translateY(-2px);
+
+      // Adjusting size .fa-windows icon
+      .fa-windows {
+        transform: scale(0.8) translateY(1px);
+      }
+    }
+  }
+}
+
+// X.2) ADJUSTING STYLES AND ACTIONS FOR X-LARGE CONTENTS
+@media (min-width: 1200px) {
+  #navigation {
+    // Adjusting width of container of #navgigation element on xl-contexts
+    .container {
+      max-width: 1140px;
+    }
+
+    // Adjusting .searchField and .searchButton of form when it is inside the navbar (only in xl-contexts)
+    .searchField,
+    .searchButton {
+      border: none;
+      background: #3c3c3c;
+      color: #eaeaea;
+      font-weight: lighter;
+    }
+
+    // Adjusting .searchButton status hover and focus
+    .searchButton:hover,
+    .searchButton:focus {
+      background: #bdbdbd;
+      color: #fff;
+    }
+
+    // Adjusting .searchButton placeholder property
+    .campo-buscar::placeholder {
+      color: #b9b9b9;
+    }
+  }
+}
