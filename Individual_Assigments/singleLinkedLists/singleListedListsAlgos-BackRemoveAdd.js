@@ -13,9 +13,8 @@ class node{
 // single linked list class
 class singleLinkedList{
     // constructor accepts value to create head node
-    constructor(){
-        this.head = null;
-        this.size = 0;
+    constructor(value){
+        this.head = new node(value)
     }
     // =============================================================
     // YOUR CODE HERE
@@ -32,28 +31,37 @@ class singleLinkedList{
             this.head = new node(val);
             this.head.next = temp;
         }
-        this.size++;
+    }
+    // Remove Front Method
+    // Write a method to remove the head node and return the new list head node. If the list is empty, return null.
+    removeFront() {
+        if (this.head === null) {
+          return "list is empty";
+        } else {
+          this.head = this.head.next;
+        }
+      }
+
+    // Front Method
+    // Write a method to return the value (not the node) at the head of the list. If the list is empty, return null.
+    
+    front(){
+        return this.head.value
     }
 
-    // Lenght Method - return the 
-    display() {
-        let i = 0
-        let current = this.head;
-        let str = "singleLinkedList { head: node { value: ";
-        while (current) {
-            if (current.next != null){
-                str += current.value + ", next: node {value: " ;
-            }
-            else {
-                str += current.value + ", next: " + null;   
-            }
-            current = current.next;
-            i++;
-        }
-        str += " }".repeat(i) + " }"
-        console.log(str);
-      }
-    
+    // Back Method
+    // Create a function that accepts a ListNode pointer and returns the last value in the list.
+
+    back(){
+        return this.head.value
+    }
+
+    // Remove Back Method
+    // Create a standalone function that removes the last ListNode in the list and returns the new list.
+
+    // Add Back Method
+    // Create a function that creates a ListNode with given value and inserts it at end of a linked list.
+
 }
 
 
@@ -61,12 +69,10 @@ class singleLinkedList{
 // REVIEWING METHOD ANSWERS
 // =========================================================================================
 
-// Creating a SLL with 10 nodes from 1 to 10 with values 1,2,3,4,5,6,7,8,9,10
+var list = new singleLinkedList(1);
+list.addFront(99)
+list.removeFront()
 
-var list = new singleLinkedList();
-for (i = 10; i > 0; i--){
-    list.addFront(i)
-}
-console.log(list)
-console.log(list.display())
-
+console.log(" ")
+console.log("This is the current SLL: ", list, "\n")
+console.log("This is the first value of the current SLL: ",list.front() )

@@ -13,8 +13,9 @@ class node{
 // single linked list class
 class singleLinkedList{
     // constructor accepts value to create head node
-    constructor(value){
-        this.head = new node(value)
+    constructor(){
+        this.head = null;
+        this.size = 0;
     }
     // =============================================================
     // YOUR CODE HERE
@@ -31,6 +32,7 @@ class singleLinkedList{
             this.head = new node(val);
             this.head.next = temp;
         }
+        this.size++
     }
     
     contains(value) {
@@ -51,7 +53,7 @@ class singleLinkedList{
 // REVIEWING METHOD ANSWERS
 // =========================================================================================
 
-var waitingLine = new singleLinkedList("John");
+var waitingLine = new singleLinkedList();
 waitingLine.addFront("Peter")
 waitingLine.addFront("Sam")
 waitingLine.addFront("Susan")

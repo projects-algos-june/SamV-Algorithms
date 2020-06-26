@@ -13,8 +13,9 @@ class node{
 // single linked list class
 class singleLinkedList{
     // constructor accepts value to create head node
-    constructor(value){
-        this.head = new node(value)
+    constructor(){
+        this.head = null;
+        this.size = 0;
     }
     // =============================================================
     // YOUR CODE HERE
@@ -31,6 +32,7 @@ class singleLinkedList{
             this.head = new node(val);
             this.head.next = temp;
         }
+        this.size++
     }
     // Remove Front Method
     // Write a method to remove the head node and return the new list head node. If the list is empty, return null.
@@ -40,6 +42,7 @@ class singleLinkedList{
         } else {
           this.head = this.head.next;
         }
+        this.size--;
       }
 
     // Front Method
@@ -56,7 +59,8 @@ class singleLinkedList{
 // REVIEWING METHOD ANSWERS
 // =========================================================================================
 
-var list = new singleLinkedList(1);
+var list = new singleLinkedList();
+list.addFront(1)
 list.addFront(99)
 list.removeFront()
 

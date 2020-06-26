@@ -13,8 +13,9 @@ class node{
 // single linked list class
 class singleLinkedList{
     // constructor accepts value to create head node
-    constructor(value){
-        this.head = new node(value);
+    constructor(){
+        this.head = null;
+        this.size = 0;
     }
     // =============================================================
     // YOUR CODE HERE
@@ -31,6 +32,7 @@ class singleLinkedList{
             this.head = new node(val);
             this.head.next = temp;
         }
+        this.size++;
     }
 
     // Lenght Method - return the 
@@ -51,8 +53,8 @@ class singleLinkedList{
 // REVIEWING METHOD ANSWERS
 // =========================================================================================
 
-var list = new singleLinkedList(5000);
-for (i = 4999; i >= 1; i--){
+var list = new singleLinkedList();
+for (i = 5000; i >= 1; i--){
     list.addFront(i)
 }
 
