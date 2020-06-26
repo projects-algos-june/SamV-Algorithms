@@ -13,9 +13,9 @@ class node{
 // single linked list class
 class singleLinkedList{
     // constructor accepts value to create head node
-    constructor(value){
-        this.head = new node(value);
-        this.size = 1;
+    constructor(){
+        this.head = null;
+        this.size = 0;
     }
     // =============================================================
     // YOUR CODE HERE
@@ -79,7 +79,7 @@ class singleLinkedList{
 // REVIEWING METHOD ANSWERS
 // =========================================================================================
 
-var list = new singleLinkedList(1);
+var list = new singleLinkedList();
 list.addFront(3)
 list.addFront(15)
 list.addFront(5)
