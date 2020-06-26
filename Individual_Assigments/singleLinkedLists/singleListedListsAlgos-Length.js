@@ -14,7 +14,7 @@ class node{
 class singleLinkedList{
     // constructor accepts value to create head node
     constructor(value){
-        this.head = new node(value)
+        this.head = new node(value);
     }
     // =============================================================
     // YOUR CODE HERE
@@ -32,23 +32,18 @@ class singleLinkedList{
             this.head.next = temp;
         }
     }
-    // Remove Front Method
-    // Write a method to remove the head node and return the new list head node. If the list is empty, return null.
-    removeFront() {
-        if (this.head === null) {
-          return "list is empty";
-        } else {
-          this.head = this.head.next;
+
+    // Lenght Method - return the 
+    length() {
+        var runner = this.head;
+        var numberOfNodes = 0
+        while(runner) { // counts nodes of the list until the last node
+            numberOfNodes += 1;
+            runner=runner.next
         }
-      }
-
-    // Front Method
-    // Write a method to return the value (not the node) at the head of the list. If the list is empty, return null.
-    
-    front(){
-        return this.head.value
+        return numberOfNodes
     }
-
+    
 }
 
 
@@ -56,10 +51,11 @@ class singleLinkedList{
 // REVIEWING METHOD ANSWERS
 // =========================================================================================
 
-var list = new singleLinkedList(1);
-list.addFront(99)
-list.removeFront()
+var list = new singleLinkedList(5000);
+for (i = 4999; i >= 1; i--){
+    list.addFront(i)
+}
 
-console.log(" ")
-console.log("This is the current SLL: ", list, "\n")
-console.log("This is the first value of the current SLL: ",list.front() )
+console.log("")
+
+console.log("The numbers of Nodes in the current SLL is: ", list.length(), "\n")

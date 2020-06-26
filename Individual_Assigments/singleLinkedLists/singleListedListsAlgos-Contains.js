@@ -51,7 +51,7 @@ class singleLinkedList{
 // REVIEWING METHOD ANSWERS
 // =========================================================================================
 
-var waitingLine = new singleLinkedList();
+var waitingLine = new singleLinkedList("John");
 waitingLine.addFront("Peter")
 waitingLine.addFront("Sam")
 waitingLine.addFront("Susan")
