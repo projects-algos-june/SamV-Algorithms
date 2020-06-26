@@ -111,6 +111,59 @@ class singleLinkedList{
         }
     }
 
+    // Second to Last Value Method
+    //Create a standalone function that, given a pointer to the first node in a singly linked list, will return the second-to-last value in that list. What will you return if the list is not long enough?
+
+    secondToLast(){
+        let runner = this.head;
+        if (this.head == null || this.head.next == null ){ // Check if SLL is empty or composed by only one node. If it is then return null
+            return null
+        }
+        else{ // if the SLL has more than one node, then:
+            
+            while(runner.next.next){ // Traverse the SLL until the second-to-last node
+                runner = runner.next;
+            }
+            return runner.value
+        } 
+    }
+
+    //Copy Method
+    //Create a standalone function that, given a pointer to the first node in a singly linked list, will return the second-to-last value in that list. What will you return if the list is not long enough?
+
+    copy(){
+        let copiedSLL = new singleLinkedList()
+        let runner = this.head;
+        if (this.head == null){ // Check if SLL is empty. If it is then return the copied SSL with a null head
+            return copiedSLL
+        }
+        else{ // if the SLL has more than one node, then:
+            while(runner){ // Traverse the SLL until the second-to-last node
+                copiedSLL.addBack(runner.value);
+                runner = runner.next
+            }
+            return copiedSLL
+        }
+
+    }
+
+    // Filter Method
+
+    filter(lowVal, highVal){
+        let filteredSLL = new singleLinkedList()
+        let runner = this.head;
+        if (this.head == null){ // Check if SLL is empty. If it is then return the copied SSL with a null head
+            return filteredSLL
+        }
+        while(runner){ // Traverse the SLL filtering values that are out of the range
+            if (runner.value < highVal && runner.value > lowVal){
+                filteredSLL.addBack(runner.value);
+            }
+            runner = runner.next
+        }
+        return filteredSLL
+    }
+
     // Display Method
     display() {
         let i = 0
@@ -146,12 +199,25 @@ class singleLinkedList{
 // =========================================================================================
 
 var list = new singleLinkedList();
-list.addFront(1);
-list.addBack(2);
-list.addBack(3);
-list.addBack(4);
+list.addFront(4);
+list.addBack(5);
+list.addBack(7);
+list.addBack(10);
 list.addFront(0);
-console.log(list.back()); // should print 4
-list.removeBack();
-list.display() // should print a SLL with 4 nodes, each with the consecutive values 0,1,2,3
 
+console.log("\n")
+
+// 1) Checking Second to last Value Method
+console.log("Checking Second to last Value Method:")
+console.log(list.secondToLast()); // should print 7
+list.display() // should print a SLL with 4 nodes, each with the consecutive values 0,4,5,7,10
+console.log("\n")
+
+// 2) Checking Copy Method
+console.log("Checking Copy Method:")
+list.copy().display() // should print a SLL with 4 nodes, each with the consecutive values 0,4,5,7,10
+console.log("\n")
+
+// 3) Checking Filter Method
+console.log("Checking Filter Method:")
+list.filter(3,9).display() // should print a SLL with 4 nodes, each with the consecutive values 4,5,7
