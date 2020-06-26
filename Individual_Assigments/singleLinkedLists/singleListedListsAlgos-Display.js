@@ -35,26 +35,36 @@ class singleLinkedList{
         this.size++;
     }
 
-    // Lenght Method - return the 
+    // Display mehtod
+    // Display Method
     display() {
         let i = 0
         let current = this.head;
-        let str = "singleLinkedList { head: node { value: ";
-        while (current) {
-            if (current.next != null){
-                str += current.value + ", next: node {value: " ;
-            }
-            else {
-                str += current.value + ", next: " + null;   
-            }
-            current = current.next;
-            i++;
+        let str = "";
+        if (current == null){
+            str = "singleLinkedList { head: "+null+ "}";
+            console.log(str)
         }
-        str += " }".repeat(i) + " }"
-        console.log(str);
-      }
-    
+        else{
+            str = "singleLinkedList { head: node { value: ";
+            while (current) {
+                if (current.next != null){
+                    str += current.value + ", next: node {value: " ;
+                }
+                else {
+                    str += current.value + ", next: " + null;   
+                }
+                current = current.next;
+                i++;
+            }
+            str += " }".repeat(i) + " }"
+            console.log(str);
+        }
+        
+    }
 }
+    
+
 
 
 //=========================================================================================
@@ -68,5 +78,5 @@ for (i = 10; i > 0; i--){
     list.addFront(i)
 }
 console.log(list)
-console.log(list.display())
+list.display()
 

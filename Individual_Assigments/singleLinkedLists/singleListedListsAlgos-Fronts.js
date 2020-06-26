@@ -49,7 +49,11 @@ class singleLinkedList{
     // Write a method to return the value (not the node) at the head of the list. If the list is empty, return null.
     
     front(){
-        return this.head.value
+        if (this.head != null){
+            return this.head.value
+        }
+            return null;
+        
     }
 
 }
