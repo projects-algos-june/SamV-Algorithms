@@ -21,7 +21,7 @@ class singleLinkedList{
     // =============================================================
     
     // Add Front Method
-    // Write a method that accepts a value and create a new node, assign it to the list head, and return a pointer to the new head node.
+    
     addFront(val){
         if (this.head === null){
             this.head = new node(val);
@@ -32,21 +32,16 @@ class singleLinkedList{
             this.head.next = temp;
         }
     }
-    // Remove Front Method
-    // Write a method to remove the head node and return the new list head node. If the list is empty, return null.
-    removeFront() {
-        if (this.head === null) {
-          return "list is empty";
-        } else {
-          this.head = this.head.next;
-        }
-      }
-
-    // Front Method
-    // Write a method to return the value (not the node) at the head of the list. If the list is empty, return null.
     
-    front(){
-        return this.head.value
+    contains(value) {
+        var runner = this.head;
+        while(runner) {
+            if(runner.value == value) {
+                return true
+            }
+            runner = runner.next
+        }
+        return false
     }
 
 }
@@ -56,9 +51,15 @@ class singleLinkedList{
 // REVIEWING METHOD ANSWERS
 // =========================================================================================
 
-var list = new singleLinkedList();
-list.addFront(1)
-list.addFront(99)
-list.removeFront()
-console.log("This is the current SLL: ", list, "\n")
-console.log("This is the first value of the current SLL: ",list.front() )
+var waitingLine = new singleLinkedList();
+waitingLine.addFront("Peter")
+waitingLine.addFront("Sam")
+waitingLine.addFront("Susan")
+waitingLine.addFront("Michael")
+waitingLine.addFront("Jeff")
+waitingLine.addFront("Tadd")
+waitingLine.addFront("Ryan")
+
+console.log(" ")
+console.log("Tadd is on the current waiting List? ", waitingLine.contains("Tadd"),"\n")
+console.log("Mary is on the current waiting List? ",waitingLine.contains("Mary"),"\n")
